@@ -1,25 +1,51 @@
-class Singleton{
-    static _instance :Singleton;
-    data:string;
-    constructor(d:string)
-    {
-        this.data=d; 
-    }
-    static getInstance(d:string)
-    {
-         if(Singleton._instance==null)
+class Setting{
+    private static _setting:Setting;
+    public theme:string="Light";
+    public fontSize:number=10;
+    // constructor(font,theme)
+    // {
+    // //     this.fontSize:num=font;
+    // //     this.theme=theme;
+    // }
+    public static createInstance(){
+        if(Setting._setting==null)
          {
-            Singleton._instance=new Singleton(d);
+           return Setting._setting=new Setting();
          }
-         return Singleton._instance;
+         return Setting._setting;
     }
 }
+class login{
 
-const first=Singleton.getInstance("data");
-console.log(first.data);
-const second=Singleton.getInstance("data two");
-console.log(second.data);
+    loginSetting():void{
+        const loginThem:Setting=Setting.createInstance();
+        loginThem.fontSize=20;
+        loginThem.theme='dark';
+        console.log(`The home page setting:  Theme : ${loginThem.theme}, FontSize:${loginThem.fontSize}`);
+    }
+}
+class homepageSetting{
+    homepage():void{
+    const homeTheme:Setting=Setting.createInstance();
+    homeTheme.fontSize=17;
+    homeTheme.theme='gray';
+    console.log(`The home page setting:  Theme : ${homeTheme.theme}, FontSize:${homeTheme.fontSize}`);
+}
+}
+class dashboardsetting{
+ dashboard():void{
+    const dashboard:Setting=Setting.createInstance();
+    dashboard.fontSize=10;
+    dashboard.theme='orange';
+    console.log(`The home page setting:  Theme : ${dashboard.theme}, FontSize:${dashboard.fontSize}`);
+}
+}
 
-console.log(first===second);
+ let dashboardsettingDisplay=new dashboardsetting()
+ dashboardsettingDisplay.dashboard()
+ let loginsettingDisplay=new login()
+ loginsettingDisplay.loginSetting()
+ let homedsettingDisplay=new homepageSetting()
+ homedsettingDisplay.homepage()
 
 
