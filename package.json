@@ -1,0 +1,22 @@
+{
+  "name": "advace-software-engineering",
+  "version": "1.0.0",
+  "description": "this repo includes Design pattern and unite testing in typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasinrahnaward/advance-software-engineering.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasinrahnaward/advance-software-engineering/issues"
+  },
+  "homepage": "https://github.com/yasinrahnaward/advance-software-engineering#readme",
+  "dependencies": {
+    "browserify": "^17.0.0"
+  }
+}
