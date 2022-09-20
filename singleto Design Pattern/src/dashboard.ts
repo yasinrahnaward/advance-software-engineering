@@ -3,7 +3,7 @@ class dashboarPageSetting{
     
     dashboradSetting(){
         
-    const dashboard=new Setting();
+    const dashboard=Setting.createInstance()
     dashboard.fontSize=123;
     dashboard.theme='dark-light';
     console.log(`Dash Board page setting : \n `);

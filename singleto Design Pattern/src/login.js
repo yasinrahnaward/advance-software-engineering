@@ -5,7 +5,7 @@ var loginSetting = /** @class */ (function () {
     function loginSetting() {
     }
     loginSetting.prototype.loginPageSetting = function () {
-        var login = new setting_1["default"]();
+        var login = setting_1["default"].createInstance();
         login.fontSize = 34;
         login.theme = 'orange';
         console.log("Login page setting : \n ");

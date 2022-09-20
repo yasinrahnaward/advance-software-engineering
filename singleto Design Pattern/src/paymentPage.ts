@@ -2,7 +2,7 @@ import Setting from "./setting";
 class PaymentPageSetting{
     PaymentPage(){
         
-    const Payment=new Setting();
+    const Payment=Setting.createInstance()
     Payment.fontSize=17;
     Payment.theme='blue';
     console.log(`Payment Page setting : \n `);

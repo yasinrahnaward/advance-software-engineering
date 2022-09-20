@@ -5,7 +5,7 @@ var PaymentPageSetting = /** @class */ (function () {
     function PaymentPageSetting() {
     }
     PaymentPageSetting.prototype.PaymentPage = function () {
-        var Payment = new setting_1["default"]();
+        var Payment = setting_1["default"].createInstance();
         Payment.fontSize = 17;
         Payment.theme = 'blue';
         console.log("Payment Page setting : \n ");

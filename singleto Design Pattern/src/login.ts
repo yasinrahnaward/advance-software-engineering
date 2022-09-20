@@ -2,7 +2,7 @@ import Setting from "./setting";
 class loginSetting{
     loginPageSetting(){
         
-    const login=new Setting();
+    const login=Setting.createInstance()
     login.fontSize=34;
     login.theme='orange';
     console.log(`Login page setting : \n `);

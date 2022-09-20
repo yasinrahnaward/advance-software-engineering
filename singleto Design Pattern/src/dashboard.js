@@ -5,7 +5,7 @@ var dashboarPageSetting = /** @class */ (function () {
     function dashboarPageSetting() {
     }
     dashboarPageSetting.prototype.dashboradSetting = function () {
-        var dashboard = new setting_1["default"]();
+        var dashboard = setting_1["default"].createInstance();
         dashboard.fontSize = 123;
         dashboard.theme = 'dark-light';
         console.log("Dash Board page setting : \n ");
